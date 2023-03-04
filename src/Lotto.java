@@ -1,12 +1,11 @@
-import java.sql.Array;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Lotto {
     public static void main(String[] args) {
-        List<Integer> collect = IntStream.range(1, 45).mapToObj(x -> x).collect(Collectors.toList());
-
+        List<Integer> collect = IntStream.rangeClosed(1, 45).mapToObj(x -> x).collect(Collectors.toList());
 
         for (int i = 0; i < 5; i++) {
             Collections.shuffle(collect);
